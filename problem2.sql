@@ -87,8 +87,37 @@ VALUES
 
 -- Queries
 -- Query 1: Retrieve the names and stock quantities of all products.
-
+SELECT product_name, stock_quantity
+FROM products;
 
 -- Query 2: Retrieve the product names and quantities for one of the orders placed.
+SELECT products.product_name, order_items.quantity
+FROM products
+JOIN order_items ON products.id = order_items.product_id
+WHERE order_items.order_id = 1;
 
 -- Query 3: Retrieve all orders placed by a specific customer (including the ID’s of what was ordered and the quantities).
+SELECT orders.id, products.id, products.product_name, order_items.quantity
+FROM orders
+JOIN order_items ON orders.id = order_items.order_id
+WHERE orders.customer_id = 1;
+
+-- Update data
+-- Add an order
+INSERT INTO orders (id, customer_id, order_date)
+VALUES (6, 4, '2025-02-15');
+-- Add items to order
+INSERT INTO order_items (order_id, product_id, quantity)
+VALUES (6, 1, 3);
+-- Update stock quantity
+UPDATE products
+SET stock_quantity = stock_quantity - 3
+WHERE id = 3;
+
+-- Delete data
+-- Remove items from the order
+DELETE FROM order_items
+WHERE order_id = 5;
+-- Remove the order
+DELETE FROM orders
+WHERE id = 5;
