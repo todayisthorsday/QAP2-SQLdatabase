@@ -57,3 +57,38 @@ VALUES  (1, 'Jack', 'Torrence', 'jack@theoverlook.com'),
 
 -- Orders data (5)
 -- (each order should have at least two items ordered)
+-- Insert data into orders table
+INSERT INTO orders (id, customer_id, order_date)
+VALUES
+    (1, 1, '2025-02-10'),
+    (2, 2, '2025-02-11'),
+    (3, 3, '2025-02-12'),
+    (4, 4, '2025-02-13'),
+    (5, 1, '2025-02-14');
+
+-- Insert data into order_items table 
+INSERT INTO order_items (order_id, product_id, quantity)
+VALUES
+    -- Order 1 (Jack Torrence)
+    (1, 1, 2),  
+    (1, 3, 1), 
+    -- Order 2 (Carrie White)
+    (2, 4, 3),  
+    (2, 2, 1),  
+    -- Order 3 (Paul Shelton)
+    (3, 5, 2),  
+    (3, 1, 5),  
+    -- Order 4 (Roland Deschain)
+    (4, 2, 1),  
+    (4, 3, 3), 
+    -- Order 5 (Jack Torrence)
+    (5, 4, 2),  
+    (5, 5, 1);  
+
+-- Queries
+-- Query 1: Retrieve the names and stock quantities of all products.
+
+
+-- Query 2: Retrieve the product names and quantities for one of the orders placed.
+
+-- Query 3: Retrieve all orders placed by a specific customer (including the ID’s of what was ordered and the quantities).
