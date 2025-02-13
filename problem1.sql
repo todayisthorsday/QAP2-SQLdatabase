@@ -43,3 +43,19 @@ CREATE TABLE enrollments (
     FOREIGN KEY (student_id) REFERENCES students(id),
     FOREIGN KEY (course_id) REFERENCES courses(id)
 )
+
+-- Insert data into tables
+-- Students data (5)
+INSERT INTO students (first_name, last_name, email, school_enrollment_date)
+VALUES ('Donald', 'Blake', 'odinson@thunder.com', '2012-04-04'),
+       ('Anthony', 'Stark', 'tony@starkindustries.com', '2012-04-04'),
+       ('Gwendolyne', 'Stacy', 'gwenpool@spider-society.com', '2012-04-04');
+       ('Steven', 'Rogers', 'cap@aol.com', '2012-04-04');
+       ('Natalia', 'Romanova', 'blackspider@theredroom.com', '2012-04-04');
+
+-- Professors data (4)
+INSERT INTO professors (first_name, last_name, department)
+        ('Robert', 'Banner', 'physics'),
+        ('Charles', 'Xavier', 'sociology'),
+        ('Jane', 'Foster', 'astrophysics'),
+        ('Peter', 'Parker', 'photography');
