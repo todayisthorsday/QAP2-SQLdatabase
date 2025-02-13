@@ -47,15 +47,23 @@ CREATE TABLE enrollments (
 -- Insert data into tables
 -- Students data (5)
 INSERT INTO students (first_name, last_name, email, school_enrollment_date)
-VALUES ('Donald', 'Blake', 'odinson@thunder.com', '2012-04-04'),
+VALUES ('Donald', 'Blake', 'odinson@thunderer.com', '2012-04-04'),
        ('Anthony', 'Stark', 'tony@starkindustries.com', '2012-04-04'),
-       ('Gwendolyne', 'Stacy', 'gwenpool@spider-society.com', '2012-04-04');
-       ('Steven', 'Rogers', 'cap@aol.com', '2012-04-04');
-       ('Natalia', 'Romanova', 'blackspider@theredroom.com', '2012-04-04');
+       ('Gwendolyne', 'Stacy', 'gwenpool@spider-society.com', '2012-04-04'),
+       ('Steven', 'Rogers', 'cap@aol.com', '2012-04-04'),
+       ('Natalia', 'Romanova', 'blackspider@theredroom.com', '2012-04-04')
 
 -- Professors data (4)
 INSERT INTO professors (first_name, last_name, department)
         ('Robert', 'Banner', 'physics'),
         ('Charles', 'Xavier', 'sociology'),
         ('Jane', 'Foster', 'astrophysics'),
-        ('Peter', 'Parker', 'photography');
+        ('Peter', 'Parker', 'photography')
+
+-- Courses data (3)
+INSERT INTO courses (course_name, course_description, professor_id)
+VALUES ('Physics 0616', 'Explore motion, energy, and forces through hands-on experiments and real-world applications. No gamma exposure required!', 1),
+       ('Sociology 5023', 'Examine social structures, identity, and prejudice through the lens of human and mutant interactions. Explore how understanding, cooperation, and conflict shape societies—and the future.', 2),
+       ('Astrophysics 2890', 'Unravel the mysteries of the cosmos, from black holes to celestial mechanics. Explore the forces shaping the universe with insights from both cutting-edge science and firsthand experience among the stars.', 3)
+       ('Photography 2099', 'Learn the art of capturing moments through a lens, from street photography to action shots. Learn composition, lighting, and timing from a photographer who knows how to snap the perfect shot—whether its a superhero moment or everyday life.', 4)
+
